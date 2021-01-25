@@ -1,5 +1,6 @@
 package guru.springframework.sfgdi;
 
+import guru.springframework.sfgdi.controllers.ConstructorInjectedController;
 import guru.springframework.sfgdi.controllers.MyController;
 import guru.springframework.sfgdi.controllers.PropertyInjectedController;
 import guru.springframework.sfgdi.controllers.SetterInjectedController;
@@ -23,6 +24,10 @@ public class SfgDiApplication {
 		System.out.println("Setter based injection");
 		SetterInjectedController setterInjectedController = (SetterInjectedController) context.getBean("setterInjectedController");
 		System.out.println(setterInjectedController.getGreeting());
+
+		System.out.println("Constructor based injection");
+		ConstructorInjectedController constructorInjectedController = (ConstructorInjectedController) context.getBean("constructorInjectedController");
+		System.out.println(constructorInjectedController.getGreeting());
 	}
 
 }
