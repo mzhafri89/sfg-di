@@ -14,6 +14,10 @@ public class SfgDiApplication {
 		String greeting = myController.sayHello();
 		System.out.println(greeting);
 
+		System.out.println("English Profile service injection");
+		Il8nController il8nController = (Il8nController) context.getBean("il8nController");
+		System.out.println(il8nController.getGreeting());
+
 		System.out.println("Primary service injection");
 		PrimaryInjectedController primaryInjectedController = (PrimaryInjectedController) context.getBean("primaryInjectedController") ;
 		System.out.println(primaryInjectedController.getGreeting());
